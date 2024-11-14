@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Iframe Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        iframe {
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Embedded Content</h1>
+    <p>Aquí tienes un ejemplo de contenido incrustado usando un iframe.</p>
+
+    <!-- Inserta la URL de tu recurso externo aquí -->
+    <iframe 
+        src="https://example.com" 
+        height="600" 
+        scrolling="auto">
+        Tu navegador no soporta iframes.
+    </iframe>
+
+    <!-- Opcional: URL de respaldo para dispositivos móviles -->
+    <script>
+        if (window.innerWidth <= 768) {
+            document.querySelector('iframe').src = "https://mobile.example.com";
+        }
+    </script>
+</body>
+</html>
